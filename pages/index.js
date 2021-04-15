@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import BlogCard from "../components/BlogCard";
 
 export async function getStaticProps () {
     const clint = createClient({
@@ -17,10 +18,12 @@ export async function getStaticProps () {
 
 export default function Recipes({ blogs }) {
     console.log(blogs);
-    
+
     return (
         <div className="recipe-list">
-            Recipe List
+            {blogs.map(blog => (
+                <BlogCard key={blog.sys.id} blog={blog} />
+            ))}
         </div>
     )
 }
