@@ -1,11 +1,16 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const BlogCard = ({ blog }) => {
     const {slug, title, thumbnail, description } = blog.fields
     return (
         <div className="card">
             <div className="featured">
-                {/* image thumb */}
+                <Image 
+                    src={`https:${thumbnail.fields.file.url}`} 
+                    height={thumbnail.fields.file.details.image.height}
+                    width={thumbnail.fields.file.details.image.width}
+                />
             </div>
             <div className="content">
                 <div className="info">
