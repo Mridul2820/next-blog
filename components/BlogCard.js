@@ -17,7 +17,7 @@ const BlogCard = ({ blog }) => {
                     <h4>{ title }</h4>
                     <p>{ description }</p>
                 </div>
-                <div className="action">
+                <div className="actions">
                     <Link href={'/blog/' + slug}>
                         <a>See More</a>
                     </Link>

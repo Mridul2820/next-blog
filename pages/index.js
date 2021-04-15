@@ -20,10 +20,18 @@ export default function Recipes({ blogs }) {
     console.log(blogs);
 
     return (
-        <div className="recipe-list">
+        <div className="blog-list">
             {blogs.map(blog => (
                 <BlogCard key={blog.sys.id} blog={blog} />
             ))}
+
+            <style jsx>{`
+                .blog-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px 60px;
+                }
+            `}</style>
         </div>
     )
 }
