@@ -1,0 +1,23 @@
+
+.banner h2 {
+    margin: 0;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+
+.description {
+    margin: 0;
+    border-left: 4px solid #777;
+    padding-left: 10px;
+    margin-bottom: 20px !important;
+}
+
+.maininfo p {
+    margin: 10px 0;
+}
+
+.maininfo a {
+    text-decoration: none;
+    color: #00692f;
+}
